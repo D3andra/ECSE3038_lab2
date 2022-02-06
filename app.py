@@ -112,7 +112,8 @@ def delete_data(id):
         if database2[i]["id"] == id:
             database2.remove(database2[i])
 
-            return f"success : true"
+            return jsonify("success : true")
+    return jsonify("success: false")        
 
 if __name__ == '__main__':
     app.run(
